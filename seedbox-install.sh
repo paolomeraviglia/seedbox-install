@@ -88,7 +88,7 @@ plex(){
 
 sonarr(){
 	sudo apt-get install libmono-cil-dev;
-	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC;
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EBFF6B99D9B78493;
 	sudo echo "deb http://apt.sonarr.tv/ master main" | sudo tee /etc/apt/sources.list.d/sonarr.list;
 	sudo apt-get update;
 	sudo apt-get install nzbdrone;
@@ -120,7 +120,7 @@ radarr(){
 	sudo apt update && apt install libmono-cil-dev curl mediainfo;
 	sudo apt-get install mono-devel mediainfo sqlite3 libmono-cil-dev -y;
 	cd /tmp;
-	wget https://github.com/Radarr/Radarr/releases/download/v0.2.0.45/Radarr.develop.0.2.0.45.linux.tar.gz;
+	wget https://github.com/Radarr/Radarr/releases/download/v3.0.2.4369/Radarr.develop.3.0.2.4369.linux.tar.gz;
 	sudo tar -xf Radarr* -C /opt/;
 	sudo chown -R ${username}:${username} /opt/Radarr;
 
@@ -147,7 +147,7 @@ radarr(){
 
 jackett(){
 	sudo apt-get install libcurl4-openssl-dev;
-	wget https://github.com/Jackett/Jackett/releases/download/v0.7.1622/Jackett.Binaries.Mono.tar.gz;
+	wget https://github.com/Jackett/Jackett/releases/download/v0.17.284/Jackett.Binaries.Mono.tar.gz;
 	sudo tar -xf Jackett* -C /opt/;
 	sudo chown -R ${username}:${username} /opt/Jackett;
 
